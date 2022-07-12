@@ -1,13 +1,13 @@
-let playerButtons = document.querySelectorAll(".pick.player");
+function gameLoop() {
+    let playerButtons = document.querySelectorAll(".pick.player");
 
-
-
-playerButtons.forEach( btn => {
-    btn.addEventListener("click", event => {
-        removeAllCurrent();
-        gameLoop(event, btn);
+    playerButtons.forEach( btn => {
+        btn.addEventListener("click", (event) => {
+            removeAllCurrent();
+            singleRound(event, btn);
+        });
     });
-});
+}
 
 function removeAllCurrent() {
     let buttons = document.querySelectorAll(".pick");
@@ -18,7 +18,7 @@ function removeAllCurrent() {
     }
 }
 
-function gameLoop(event, playerBtn) {
+function singleRound(event, playerBtn) {
     let playerPick = playerBtn.getAttribute("data-pick");
     let computerPick = computerChoose();
     const computerBtn = document.querySelector(`.pick.computer[data-pick="${computerPick}"]`);
@@ -56,3 +56,6 @@ function chooseWinner(player, computer) {
     }
     return (computer == "rock") ? "computer" : "player";
 }
+
+
+gameLoop();
