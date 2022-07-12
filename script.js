@@ -25,10 +25,11 @@ function singleRound(event, playerBtn) {
     playerBtn.classList.add("current");
     computerBtn.classList.add("current");
 
-    let winner = chooseWinner(playerPick, computerPick);
-    if (winner !== "draw") {
-        increaseScore(winner);
+    let result = chooseWinner(playerPick, computerPick);
+    if (result !== "draw") {
+        increaseScore(result);
     }
+    showResult(result);
 }
 
 function increaseScore(target) {
@@ -37,6 +38,19 @@ function increaseScore(target) {
     scoreText.textContent = `Score: ${score + 1}`;
 }
 
+function showResult(result) {
+    const resultDiv = document.querySelector(".result");
+    switch (result) {
+        case "player" :
+            resultDiv.textContent = "You have won!";
+            break;
+        case "computer":
+            resultDiv.textContent = "You have lost!";
+            break;
+        default:
+            resultDiv.textContent = "Draw!"
+    }
+}
 
 function computerChoose() {
     const picks = ["rock", "paper", "scissors"];

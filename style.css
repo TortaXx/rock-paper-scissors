@@ -19,6 +19,7 @@ body {
     justify-content: center;
 }
 
+
 .hero {
     padding: 30px;
     background-color: #3c3f58;
@@ -26,12 +27,23 @@ body {
     justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
-    flex: auto;
-    gap: 20%;
+    /* flex: auto; */
+    height: 100vh;
+    gap: 0px 10%;
+}
+
+.hero .result {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 900;
+    width: 100%;
+    height: fit-content;
+    align-self: center;
 }
 
 .card {
     background-color: #43455c;
+    align-self: flex-start;
     display: flex;
     flex-direction: column;
     align-items: center;
