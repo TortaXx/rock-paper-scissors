@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    color: #3bba9c;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100vh;
+}
+
+.header {
+    background-color: #2e3047;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.hero {
+    padding: 30px;
+    background-color: #3c3f58;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    flex: auto;
+    gap: 20%;
+}
+
+.card {
+    background-color: #43455c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px; 
+}
+
+.card h3 {
+    font-size: 30px;
+}
+
+.options {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+    width: 350px;
+
+
+}
+
+.pick {
+    background-color: rgb(130, 127, 127);
+    color: black;
+    font-size: 20px;
+    border-radius: 5px;
+    border: 2px solid black;
+    padding: 5px 12px;
+    flex: 1;
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+    align-items: center;
+    width: 60px;
+}
+
+.pick.player:hover {
+    transform: scale(1.15);
+    cursor: pointer;
+}
+
+.pick img {
+    width: 4vh;
+    min-width: none;
+    flex: 1;
+}
+
+.footer {
+    background-color: #2e3047;
+    color: rgba(255, 255, 255, 0.711);
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+}
+
